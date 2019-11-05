@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: flux
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       name: flux
@@ -100,7 +100,7 @@ spec:
         - --ssh-keygen-dir=/var/fluxd/keygen
 
         # replace or remove the following URL
-        - --git-url=git@github.com:mhausenblas/gitops101
+        - --git-url=git@github.com:jeczkor/gitops101
         - --git-branch=master
         - --git-path=deploy/kubernetes
 
